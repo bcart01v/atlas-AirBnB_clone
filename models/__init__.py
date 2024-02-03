@@ -1,4 +1,4 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 
 """Init Model Module.
     Eventually, this might do something, for now it's just a placeholder.
