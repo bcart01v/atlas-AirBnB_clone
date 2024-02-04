@@ -8,10 +8,21 @@ import uuid
 from datetime import datetime
 
 class BaseModel:
-    def __init__(self):
-        self.id = str(uuid.uuid4())
-        self.created_at = datetime.now()
-        self.updated_at = self.created_at
+    def __init__(self, *args, **kwargs):
+        if kwargs:
+            # Loop through each key, value pair in kwargs
+            for key, value in kwargs.items():
+                # Skip __class__ attribute
+                if key == "__class__":
+                    continue
+                # Convert string datetime to datetime object for created_at and updated_at
+                if key in ["created_at", "updated_at"]:
+                    value = datetime.fromisoformat(value)
+                setattr(self, key, value)
+        else:
+            self.id = str(uuid.uuid4())
+            self.created_at = datetime.now()
+            self.updated_at = self.created_at
     
     def __str__(self):
         return "[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__)
@@ -29,4 +40,3 @@ class BaseModel:
         dict_copy["created_at"] = self.created_at.isoformat()
         dict_copy["updated_at"] = self.updated_at.isoformat()
         return dict_copy
-
