@@ -61,6 +61,11 @@ class HBNBCommand(cmd.Cmd):
         if len(args) == 1:
             print("** instance id missing **")
             return
+        try:
+            eval(args[0])
+        except NameError:
+            print("** class doesn't exist **")
+            return
         key = args[0] + "." + args[1]
         if key in storage.all():
             del storage.all()[key]
