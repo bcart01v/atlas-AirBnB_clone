@@ -3,7 +3,7 @@
 """Base Model Module for AirBnB Clone.
     """
 
-
+import models
 import uuid
 from datetime import datetime
 
