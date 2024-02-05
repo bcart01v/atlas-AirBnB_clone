@@ -11,3 +11,6 @@ tests/test_models/__pycache__/test_review.cpython-36.pyc
 tests/test_models/__pycache__/test_state.cpython-36.pyc
 tests/test_models/__pycache__/test_user.cpython-36.pyc
 tests/test_models/__pycache__/test_place.cpython-36.pyc
+file.json
+tmp
+.vscode/settings.json
