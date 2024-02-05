@@ -62,19 +62,20 @@ class TestPlace(unittest.TestCase):
         self.assertEqual(place.amenity_ids, ["amenity_id1", "amenity_id2"])
 
     def test_no_args(self):
-        self.assertEqual(place, type(Place()))
+        self.assertIsInstance(Place(), Place)
 
     def test_instance_no_kwargs(self):
         with self.assertRaises(TypeError):
             Place(id = None, created_at = None, updated_at = None)
 
     def test_instance_with_kwargs(self):
-        dttime = datetime.today()
-        dttime_iso = datetime.isoformat()
-        pl = Place(id = "957", created_at = dttime, updated_at = dttime_iso)
+        dttime = datetime.now()
+        dttime_iso = dttime.isoformat()  # Correctly call isoformat on a datetime instance
+        pl = Place(id="957", created_at=dttime_iso, updated_at=dttime_iso)  # Use ISO formatted string for both
         self.assertEqual(pl.id, "957")
-        self.assertEqual(pl.created_at, dttime)
-        self.assertEqual(pl.updated_at, dttime_iso)
+        self.assertEqual(pl.updated_at, dttime)
+        self.assertEqual(pl.created_at.isoformat(), dttime_iso)
+
 
 
 class TestPlace_save(unittest.TestCase):
@@ -84,17 +85,17 @@ class TestPlace_save(unittest.TestCase):
     def setUp(self):
         try:
             os.rename("file.json", "tmp")
-        except IOerror:
+        except FileNotFoundError:
             pass
 
     def tearDown(self):
         try:
             os.remove("file.json")
-        except IOerror:
+        except FileNotFoundError:
             pass
         try:
             os.rename("tmp", "file.json")
-        except IOerror:
+        except FileNotFoundError:
             pass
 
     def test_save(self):
