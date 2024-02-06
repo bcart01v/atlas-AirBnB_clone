@@ -4,7 +4,7 @@
 This is the beginning of the Atlas - Airbnb Clone. It's the foundation of re-creating Air-BnB, starting with the backend. 
 
 <p align="center">
-  <img src="https://github.com/bcart01v/atlas-AirBnB_clone/master/assets/AirBNBLogo.png" alt="Atlas AirBNB Logo logo">
+  <img src="https://github.com/bcart01v/atlas-AirBnB_clone/blob/main/assets/AirBNBLogo.png" alt="Atlas AirBNB Logo logo">
 </p>
 
 
@@ -88,7 +88,7 @@ All unit testing can be done running the following Command
 
 ``` python3 -m unittest discover tests ```
 
-Alternativly, you can run the unit tester on specific files. 
+Alternatively, you can run the unit tester on specific files. 
 
 ``` python3 -m unittest tests/test_models/test_base_model.py ```
 
@@ -98,7 +98,7 @@ Alternativly, you can run the unit tester on specific files.
 
 To use this project, you will need to follow these steps
 
-#### Prerequisits 
+#### Prerequisite  
 - This project was built with Python 3.8.10. You will need 3.8.x or above to properly use it, as it utilizes some date functions added in Python 3.8 
 - git (to clone the repository)
 
@@ -117,5 +117,5 @@ Then follow the steps outlined above for use.
 ## Authors
 
 - [Benjamin Carter](https://github.com/bcart01v/) 
-- [Kyle Headly](https://github.com/Y-T-O-1)
+- [Kyle Headley](https://github.com/Y-T-O-1)
 
