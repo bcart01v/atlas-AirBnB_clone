@@ -3,8 +3,9 @@
 
 This is the beginning of the Atlas - Airbnb Clone. It's the foundation of re-creating Air-BnB, starting with the backend. 
 
-![hbnb logo with old school name and mascot](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20240206%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20240206T185348Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=b199eff9b9ada959b79786874f4fa126c6a278344c58c32ac864ce12d9db83ea)
-
+<p align="center">
+  <img src="https://github.com/bcart01v/atlas-AirBnB_clone/master/assets/AirBNBLogo.png" alt="Atlas AirBNB Logo logo">
+</p>
 
 
 ## Project Description
@@ -38,4 +39,24 @@ This is our AirBnB clone project. This repository contains the first step toward
 To start the console, simply navigate to the root directory and type 
 
 ``` ./console.py ```
+
+### Usage
+
+In interactive mode
+
+``` (hbnb) help ```
+
+#### Commands currently supported:
+
+- ```quit``` and EOF to exit the program
+- ```create``` to create a new object (e.g., create BaseModel)
+- ```show``` to display an object (e.g., show BaseModel (ID)) - 
+- ```destroy``` to delete an object
+- ```all``` to display all objects of a class
+- ```update``` to update attributes of an object
+
+#### Non-Interactive Mode 
+
+``` echo "help" | ./console.py ```
+
 
