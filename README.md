@@ -4,7 +4,7 @@
 This is the beginning of the Atlas - Airbnb Clone. It's the foundation of re-creating Air-BnB, starting with the backend. 
 
 <p align="center">
-  <img src="https://github.com/bcart01v/atlas-AirBnB_clone/blob/main/assets/AirBNBLogo.png" alt="Atlas AirBNB logo">
+  <img src="https://github.com/bcart01v/atlas-AirBnB_clone/master/assets/AirBNBLogo.png" alt="Atlas AirBNB Logo logo">
 </p>
 
 
@@ -13,6 +13,20 @@ This is the beginning of the Atlas - Airbnb Clone. It's the foundation of re-cre
 #### AirBnB - Console
 
 This is our AirBnB clone project. This repository contains the first step towards constructing our very own full-stack web application, which is essentially recreating the AirBnB platform. This is the first phase, known as "The Console," is a command interpreter designed to manage the core functionalities of our AirBnB application and lay the groundwork for the subsequent web development stages.
+
+
+## Classes 
+
+The AirBnB Project uses the following classes: 
+
+|     | BaseModel | FileStorage | User | State | City | Amenity | Place | Review |
+| --- | --------- | ----------- | -----| ----- | -----| ------- | ----- | ------ |
+| **PUBLIC INSTANCE ATTRIBUTES** | `id`<br>`created_at`<br>`updated_at` | | Inherits from `BaseModel` | Inherits from `BaseModel` | Inherits from `BaseModel` | Inherits from `BaseModel` | Inherits from `BaseModel` | Inherits from `BaseModel` |
+| **PUBLIC INSTANCE METHODS** | `save`<br>`to_dict` | `all`<br>`new`<br>`save`<br>`reload` | "" | "" | "" | "" | "" | "" |
+| **PUBLIC CLASS ATTRIBUTES** | | | `email`<br>`password`<br>`first_name`<br>`last_name`| `name` | `state_id`<br>`name` | `name` | `city_id`<br>`user_id`<br>`name`<br>`description`<br>`number_rooms`<br>`number_bathrooms`<br>`max_guest`<br>`price_by_night`<br>`latitude`<br>`longitude`<br>`amenity_ids` | `place_id`<br>`user_id`<br>`text` | 
+| **PRIVATE CLASS ATTRIBUTES** | | `file_path`<br>`objects` | | | | | | |
+
+
 ## Features
 
 
@@ -59,4 +73,49 @@ In interactive mode
 
 ``` echo "help" | ./console.py ```
 
+
+#### Examples
+
+``` (hbnb) create User ```
+
+``` (hbnb) show User <id> ```
+
+``` (gbnb) destroy User <id> ```
+
+### Testing
+
+All unit testing can be done running the following Command
+
+``` python3 -m unittest discover tests ```
+
+Alternativly, you can run the unit tester on specific files. 
+
+``` python3 -m unittest tests/test_models/test_base_model.py ```
+
+
+
+## Installation
+
+To use this project, you will need to follow these steps
+
+#### Prerequisits 
+- This project was built with Python 3.8.10. You will need 3.8.x or above to properly use it, as it utilizes some date functions added in Python 3.8 
+- git (to clone the repository)
+
+#### Clone the repository
+
+``` git clone https://github.com/bcart01v/atlas-AirBnB_clone.git ```
+
+```cd atlas-AirBnB_clone```
+
+Then follow the steps outlined above for use.
+
+
+
+
+
+## Authors
+
+- [Benjamin Carter](https://github.com/bcart01v/) 
+- [Kyle Headly](https://github.com/Y-T-O-1)
 
