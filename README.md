@@ -4,7 +4,7 @@
 This is the beginning of the Atlas - Airbnb Clone. It's the foundation of re-creating Air-BnB, starting with the backend. 
 
 <p align="center">
-  <img src="https://github.com/bcart01v/atlas-AirBnB_clone/master/assets/AirBNBLogo.png" alt="Atlas AirBNB Logo logo">
+  <img src="https://github.com/bcart01v/atlas-AirBnB_clone/blob/main/assets/AirBNBLogo.png" alt="Atlas AirBNB logo">
 </p>
 
 
