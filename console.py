@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines the HBnB console."""
+"""Defines the ABnB console."""
 import cmd
 import re
 from shlex import split
@@ -31,8 +31,8 @@ def parse(arg):
         return retl
 
 
-class HBNBCommand(cmd.Cmd):
-    """Defines the HolbertonBnB command interpreter.
+class ABNBCommand(cmd.Cmd):
+    """Defines the AtlasBnB command interpreter.
 
     Attributes:
         prompt (str): The command prompt.
@@ -90,7 +90,7 @@ class HBNBCommand(cmd.Cmd):
         argl = parse(arg)
         if len(argl) == 0:
             print("** class name missing **")
-        elif argl[0] not in HBNBCommand.__classes:
+        elif argl[0] not in ABNBCommand.__classes:
             print("** class doesn't exist **")
         else:
             print(eval(argl[0])().id)
@@ -104,7 +104,7 @@ class HBNBCommand(cmd.Cmd):
         objdict = storage.all()
         if len(argl) == 0:
             print("** class name missing **")
-        elif argl[0] not in HBNBCommand.__classes:
+        elif argl[0] not in ABNBCommand.__classes:
             print("** class doesn't exist **")
         elif len(argl) == 1:
             print("** instance id missing **")
@@ -120,7 +120,7 @@ class HBNBCommand(cmd.Cmd):
         objdict = storage.all()
         if len(argl) == 0:
             print("** class name missing **")
-        elif argl[0] not in HBNBCommand.__classes:
+        elif argl[0] not in ABNBCommand.__classes:
             print("** class doesn't exist **")
         elif len(argl) == 1:
             print("** instance id missing **")
@@ -135,7 +135,7 @@ class HBNBCommand(cmd.Cmd):
         Display string representations of all instances of a given class.
         If no class is specified, displays all instantiated objects."""
         argl = parse(arg)
-        if len(argl) > 0 and argl[0] not in HBNBCommand.__classes:
+        if len(argl) > 0 and argl[0] not in ABNBCommand.__classes:
             print("** class doesn't exist **")
         else:
             objl = []
@@ -168,7 +168,7 @@ class HBNBCommand(cmd.Cmd):
         if len(argl) == 0:
             print("** class name missing **")
             return False
-        if argl[0] not in HBNBCommand.__classes:
+        if argl[0] not in ABNBCommand.__classes:
             print("** class doesn't exist **")
             return False
         if len(argl) == 1:
@@ -207,4 +207,4 @@ class HBNBCommand(cmd.Cmd):
 
 
 if __name__ == "__main__":
-    HBNBCommand().cmdloop()
+    ABNBCommand().cmdloop()
