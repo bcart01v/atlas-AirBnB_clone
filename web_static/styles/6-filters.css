@@ -45,6 +45,7 @@ h2 {
 .popover {
     display: none;
     position: absolute;
+    z-index: 100;
     top: 78%;
     left: 0;
     background-color: #FAFAFA;
